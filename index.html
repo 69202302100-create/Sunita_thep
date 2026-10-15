@@ -130,29 +130,30 @@
                 <!-- Quote Highlight -->
                 <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm italic text-slate-600 dark:text-slate-300 text-sm max-w-md mx-auto md:mx-0 border-l-4 border-l-brand-500">
                     <i class="fa-solid fa-quote-left text-brand-400 mr-2 opacity-60"></i>
-                    “ความสุขนั้นอยู่ระหว่างทาง หาใช่ที่จุดหมาย”
-                </div>
-
-                <div class="pt-2 flex flex-wrap gap-4 justify-center md:justify-start">
-                    <a href="#contact" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium shadow-lg shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
-                        <i class="fa-regular fa-envelope mr-2"></i> ติดต่อฉัน
-                    </a>
-                    <a href="#about" class="px-6 py-3 rounded-xl bg-slate-200/70 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium transition-all">
-                        ข้อมูลส่วนตัว
-                    </a>
-                </div>
-            </div>
-
-            <!-- Profile Avatar / Image Placeholder -->
+            <!-- Profile Avatar / Image -->
             <div class="relative group">
                 <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-indigo-500 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
-                <div class="relative w-56 h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border-2 border-white dark:border-slate-800 shadow-xl flex flex-col items-center justify-center text-center p-4">
-                    <!-- Standard Avatar Graphic -->
-                    <div class="w-28 h-28 rounded-full bg-brand-100 dark:bg-brand-900/50 flex items-center justify-center text-brand-600 dark:text-brand-300 text-4xl font-bold mb-2 shadow-inner">
-                        ST
+                <div class="relative w-56 h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border-2 border-white dark:border-slate-800 shadow-xl flex flex-col items-center justify-center text-center p-2">
+                    
+                    <!-- Profile Image with Automatic Fallback to Initials Badge -->
+                    <div class="w-full h-full rounded-xl overflow-hidden relative flex items-center justify-center bg-brand-100 dark:bg-brand-950/50">
+                        <img 
+                            src="https://raw.githubusercontent.com/69202302100-create/Sunita_thep/main/%E0%B8%A3%E0%B8%B9%E0%B8%9B.jpg" 
+                            alt="นางสาวสุนิตา เทพขาม"
+                            class="w-full h-full object-cover object-center"
+                            onerror="this.onerror=null; this.style.display='none'; document.getElementById('profileFallback').classList.remove('hidden');"
+                        />
+                        
+                        <!-- Fallback Avatar if image fails to load -->
+                        <div id="profileFallback" class="hidden flex flex-col items-center justify-center w-full h-full p-4">
+                            <div class="w-24 h-24 rounded-full bg-brand-500 text-white flex items-center justify-center text-3xl font-bold mb-2 shadow-lg shadow-brand-500/30">
+                                ST
+                            </div>
+                            <span class="text-xs text-slate-600 dark:text-slate-300 font-semibold">นางสาวสุนิตา เทพขาม</span>
+                            <span class="text-[10px] text-slate-400 dark:text-slate-500">อายุ 20 ปี</span>
+                        </div>
                     </div>
-                    <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">นางสาวสุนิตา เทพขาม</span>
-                    <span class="text-[10px] text-slate-400 dark:text-slate-500">อายุ 20 ปี</span>
+
                 </div>
             </div>
         </section>
